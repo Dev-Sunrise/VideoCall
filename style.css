@@ -20,16 +20,15 @@
   flex-wrap: wrap;
   margin-top: 20px;
   margin-right: -10px;
-  height: 400px;
 }
 
 #videos video {
-  margin-right: 10px;
   flex: 1 1 50%;
   max-width: 500px;
   padding: 0;
   min-width: 0;
   border-radius: 20px;
+  height: 300px;
 }
 
 .btn-add {
