@@ -20,6 +20,7 @@
   flex-wrap: wrap;
   margin-top: 20px;
   margin-right: -10px;
+  height: 400px;
 }
 
 #videos video {
