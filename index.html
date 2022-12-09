@@ -11,7 +11,7 @@
       content="width=device-width, initial-scale=1"
     />
 
-    <title>Clone Zoom với Stringee hihi</title>
+    <title>Video Call</title>
 
     <!-- import the webpage's stylesheet -->
     <link
@@ -35,14 +35,11 @@
       v-cloak
       id="app"
     >
-      <h1 class="title">
-        Ứng dụng Clone Zoom cực cool ngầu với
-        <span class="header-highlight">Stringee API</span>
-      </h1>
+      <h1 class="title">Ứng dụng Video Call cực cool ngầu</h1>
 
       <div>
         <button
-          class="button is-primary"
+          class="button btn-add"
           v-if="!room"
           @click="createRoom"
         >
@@ -50,7 +47,7 @@
         </button>
 
         <button
-          class="button is-info"
+          class="button btn-join"
           v-if="!room"
           @click="joinWithId"
         >
@@ -58,7 +55,7 @@
         </button>
 
         <button
-          class="button is-info"
+          class="button btn-join"
           v-if="room"
           @click="publish(true)"
         >
@@ -70,16 +67,21 @@
         v-if="roomId"
         class="info"
       >
-        <p>Bạn đang ở trong room <strong>{{roomId}}</strong>.</p>
+        <p>Bạn đang ở trong <strong>{{roomId}}</strong>.</p>
         <p>
-          Gửi link này cho bạn bè cùng join room nhé
+          Gửi link này cho bạn bè cùng join room nhé:
+          <br />
           <a
             v-bind:href="roomUrl"
             target="_blank"
+            class="link"
             >{{roomUrl}}</a
-          >.
+          >
         </p>
-        <p>Hoặc bạn cũng có thể copy <code>{{roomId}}</code> để share.</p>
+        <p>
+          Hoặc bạn cũng có thể copy <code class="code">{{roomId}}</code> để
+          share.
+        </p>
       </div>
     </div>
 
